@@ -37,8 +37,11 @@ ASSIGNMENT: Goal 1 Duel 1
 			var f1 = Math.floor(Math.random() * (playerOneDamage - minDamage1) + minDamage1);
 			var f2 = Math.floor(Math.random() * (playerTwoDamage - minDamage2) + minDamage2);
 			
-			console.log(f1);
-		};
+			// inflicted damage formula
+			playerOneHealth -= f1;
+			playerTwoHealth -= f2;
+			
+			console.log(playerOneName + ":" + playerOneHealth + "  " + playerTwoName + ":" + playerTwoHealth);		};
 		// calls the winnerCheck function
 		winnerCheck()
 	};
