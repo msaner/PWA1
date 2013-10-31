@@ -25,7 +25,20 @@ ASSIGNMENT: Goal 1 Duel 1
 	
 	// fight function
 	function fight(){
+		alert(playerOneName + ":" + playerOneHealth + " *START* " + playerTwoName + ":" + playerTwoHealth);
 		
+		
+		// basic "for loop"
+		for(var i = 0; i < 10; i++){
+			// generate a random number
+			
+			var minDamage1 = playerOneDamage * .5;
+			var minDamage2 = playerTwoDamage * .5;
+			var f1 = Math.floor(Math.random() * (playerOneDamage - minDamage1) + minDamage1);
+			var f2 = Math.floor(Math.random() * (playerTwoDamage - minDamage2) + minDamage2);
+			
+			console.log(f1);
+		};
 		// calls the winnerCheck function
 		winnerCheck()
 	};
