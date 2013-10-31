@@ -21,7 +21,7 @@ ASSIGNMENT: Goal 1 Duel 1
 	var playerTwoDamage = 23;
 	
 	// round number of the game
-	var round = 1;
+	var round = 0;
 	
 	// fight function
 	function fight(){
@@ -41,15 +41,36 @@ ASSIGNMENT: Goal 1 Duel 1
 			playerOneHealth -= f1;
 			playerTwoHealth -= f2;
 			
-			console.log(playerOneName + ":" + playerOneHealth + "  " + playerTwoName + ":" + playerTwoHealth);		};
-		// calls the winnerCheck function
-		winnerCheck()
+			console.log(playerOneName + ":" + playerOneHealth + "  " + playerTwoName + ":" + playerTwoHealth);	
+			
+			// calls the winnerCheck function
+			var result = winnerCheck()
+			console.log(result);	
+			
+			if (result === "no winner"){
+				round++;
+				alert(playerOneName + ":" + playerOneHealth + " *ROUND " + round + " OVER*"  + playerTwoName + ":" + playerTwoHealth);
+			}else{
+				alert(result);
+				break; // exit out of the for loop
+			};
+		};		
 	};
 	
 	// check for a winner
 	function winnerCheck(){
+		var result = "no winner";
 		
-	};
+		if(playerOneHealth < 1 && playerTwoHealth < 1){
+			result = "You Both Die";			
+		}else if(playerOneHealth < 1){
+			result = playerTwoName + " WINS!!!"
+		}else if(playerTwoHealth < 1){
+			result = playerOneName + " WINS!!!"
+		}; //end of if, else if, else if
+		return result;
+		
+	};  // end winnerCheck function
 	
 	// call (aka run) function check. This is where the program starts
 	fight();
