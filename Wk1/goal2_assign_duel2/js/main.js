@@ -22,14 +22,14 @@ ASSIGNMENT: Goal 1 Duel 1
 */
 	var playerOne = ["Spiderman", 100, 23]; // 0=name, 1=health, 2=damage
 	var playerTwo = ["Batman", 100, 23]; // 0=name, 1=health, 2=damage
-	console.log(player1 + ", player2= " + player2);
+	console.log(playerOne + ", player2= " + playerTwo);
 	
 	// round number of the game
 	var round = 0;
 	
 	// fight function
-	function fight(player1, player2){
-		console.log(player1[0], player2[0]);
+	function fight(playerOne, playerTwo){
+		console.log(playerOne[0], playerTwo[0]);
 		alert(playerOne[0] + ":" + playerOne[1] + " *START* " + playerTwo[0] + ":" + playerTwo[1]);
 		
 		
@@ -37,16 +37,16 @@ ASSIGNMENT: Goal 1 Duel 1
 		for(var i = 0; i < 10; i++){
 			// generate a random number
 			
-			var minDamage1 = playerOneDamage * .5;
-			var minDamage2 = playerTwoDamage * .5;
-			var f1 = Math.floor(Math.random() * (playerOneDamage - minDamage1) + minDamage1);
-			var f2 = Math.floor(Math.random() * (playerTwoDamage - minDamage2) + minDamage2);
+			var minDamage1 = playerOne[2] * .5;
+			var minDamage2 = playerTwo[2] * .5;
+			var f1 = Math.floor(Math.random() * (playerOne[2] - minDamage1) + minDamage1);
+			var f2 = Math.floor(Math.random() * (playerTwo[2] - minDamage2) + minDamage2);
 			
 			// inflicted damage formula
-			playerOneHealth -= f1;
-			playerTwoHealth -= f2;
+			playerOne[1] -= f1;
+			playerTwo[1] -= f2;
 			
-			console.log(playerOneName + ":" + playerOneHealth + "  " + playerTwoName + ":" + playerTwoHealth);	
+			console.log(playerOne[0] + ":" + playerOne[1] + "  " + playerTwo[0] + ":" + playerTwo[1]);	
 			
 			// calls the winnerCheck function
 			var result = winnerCheck()
@@ -54,7 +54,7 @@ ASSIGNMENT: Goal 1 Duel 1
 			
 			if (result === "no winner"){
 				round++;
-				alert(playerOneName + ":" + playerOneHealth + " *ROUND " + round + " OVER*"  + playerTwoName + ":" + playerTwoHealth);
+				alert(playerOne[0] + ":" + playerOne[1] + " *ROUND " + round + " OVER*"  + playerTwo[0] + ":" + playerTwo[1]);
 			}else{
 				alert(result);
 				break; // exit out of the for loop
@@ -66,19 +66,19 @@ ASSIGNMENT: Goal 1 Duel 1
 	function winnerCheck(){
 		var result = "no winner";
 		
-		if(playerOneHealth < 1 && playerTwoHealth < 1){
+		if(playerOne[1] < 1 && playerTwo[1] < 1){
 			result = "You Both Die";			
-		}else if(playerOneHealth < 1){
-			result = playerTwoName + " WINS!!!"
-		}else if(playerTwoHealth < 1){
-			result = playerOneName + " WINS!!!"
+		}else if(playerOne[1] < 1){
+			result = playerTwo[0] + " WINS!!!"
+		}else if(playerTwo[1] < 1){
+			result = playerOne[-] + " WINS!!!"
 		}; //end of if, else if, else if
 		return result;
 		
 	};  // end winnerCheck function
 	
 	// call (aka run) function check. This is where the program starts
-	fight(player1, player2);
+	fight(playerOne, playerTwo);
 
 })();
 
