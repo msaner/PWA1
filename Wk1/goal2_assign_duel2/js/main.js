@@ -71,7 +71,7 @@ ASSIGNMENT: Goal 1 Duel 1
 		}else if(playerOne[1] < 1){
 			result = playerTwo[0] + " WINS!!!"
 		}else if(playerTwo[1] < 1){
-			result = playerOne[-] + " WINS!!!"
+			result = playerOne[0] + " WINS!!!"
 		}; //end of if, else if, else if
 		return result;
 		
