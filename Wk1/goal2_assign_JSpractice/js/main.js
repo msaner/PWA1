@@ -88,14 +88,20 @@
     //--------------------------------------------------------
     console.log("4. sentence char count");
 
-        //PUT FUNCTION HERE
+        function charCount(ipsum){
+			var charNum = ipsum.length;
+			return charNum;
+		};
 
     console.log(charCount(ipsum));
 
     //--------------------------------------------------------
     console.log("5. how many vowels in a word");
 
-        //PUT FUNCTION HERE
+        function vowelsInWord(){
+			'JavaScript'.match("a, e, i, o, u");
+			return;
+		};
 
     console.log(vowelsInWord('JavaScript'));
 
