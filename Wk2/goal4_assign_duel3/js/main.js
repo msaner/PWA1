@@ -65,7 +65,10 @@ ASSIGNMENT: Goal 4 Duel 3
 					// Get Batmans name and health in the top right 
 					var kratos = document.querySelector('#kratos p');
 					kratos.innerHTML = fighters.players[1].name + ":" + fighters.players[1].health;	
-	
+					
+					var roundCount = document.querySelector('#round');
+					roundCount.innerHTML = "ROUND " +  round + " complete";
+					
 				//alert(fighters.players[0].name + ":" + fighters.players[0].health + " *ROUND " + round + " OVER*"  + fighters.players[1].name + ":" + fighters.players[1].health);
 				}else{
 					//alert(result);
