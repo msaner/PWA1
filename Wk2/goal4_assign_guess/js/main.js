@@ -14,15 +14,28 @@
 	var ranNum = Math.floor(1 + Math.random()*10);
 	console.log(ranNum);
 	
+	 input = document.querySelector('#input').value;
+	var out = document.querySelector('#output');
+	 btn =  document.querySelector('button');
 	
-	var values = {
-		input: document.querySelector('#input'),
-		output: document.querySelector('#output'),
-		button: document.querySelector('button')
+	console.log("input: " + input, "output: " + out, "button:" + btn);
+	
+	document.querySelector('button').onclick = function(e){
+	
+		if (input<ranNum){
+			console.log("That's too low!");
+		} else if(input.value > ranNum){
+			console.log("That's too high!");
+		};
+			
+		
+		e.preventDefault();
+		return false;
 	};
-	console.log(values[0], values[1], values[2]);
 	
-	var listener = document.querySelector('button');
+	
+	
+	/*var listener = document.querySelector('button');
 	listener.addEventListener('onclick', validateInput, false);
 	
 	 function validateInput(ranNum, values){
@@ -37,6 +50,6 @@
 		};
 	};
 	
-	var validateInput = validateInput(ranNum, values);
+	var validateInput = validateInput(ranNum, values);*/
 
 })();
