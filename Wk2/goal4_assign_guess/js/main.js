@@ -10,46 +10,36 @@
 //Game variables
 (function (){
 	
+	output = document.getElementById('output');
+	console.log("what the script will output: " + output.innerHTML);
+	
+	var myBtn = document.getElementsByTagName('button');
+	console.log(myBtn);
+	
 	// generate random number from 1-10
-	var ranNum = Math.floor(1 + Math.random()*10);
+	ranNum = Math.floor(1 + Math.random()*10);
 	console.log(ranNum);
 	
-	 input = document.querySelector('#input').value;
-	var out = document.querySelector('#output');
-	 btn =  document.querySelector('button');
 	
-	console.log("input: " + input, "output: " + out, "button:" + btn);
-	
-	document.querySelector('button').onclick = function(e){
-	
-		if (input<ranNum){
-			console.log("That's too low!");
-		} else if(input.value > ranNum){
-			console.log("That's too high!");
-		};
-			
+	var check = function () {
+		var input = document.getElementById('input').innerHTML;
+		console.log("the user entered: " + input);
 		
-		e.preventDefault();
-		return false;
+			if(ranNum > input){			
+				output.innerHTML = "That's too low, guess again!";
+				console.log("That's too low, guess again");
+			}else if(ranNum < input){
+				output.innerHTML = "That's too high, guess again!";
+				console.log("That's too high, guess again");
+			}else{
+				output.innerHTML = "YOU GUESSED THE MAGIC NUMBER!!!!!";
+				console.log("YOU GUESSED THE MAGIC NUMBER!!!!!");
+			};
 	};
 	
+	myBtn[0].addEventListener('click', check, false);
 	
 	
-	/*var listener = document.querySelector('button');
-	listener.addEventListener('onclick', validateInput, false);
-	
-	 function validateInput(ranNum, values){
-		console.log('function validateInput is running');
-		console.log("random number " + ranNum + " made it inside the function");
-				
-		playerGuess = parseInt(values.input.value);
-		
-		if (isNaN(playerGuess)){
-			var NotValidInput = document.getElementById(output);
-			NotValidInput.innerHTML('That is not a valid guess. Enter a number 1-10');
-		};
-	};
-	
-	var validateInput = validateInput(ranNum, values);*/
+
 
 })();
