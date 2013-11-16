@@ -6,14 +6,17 @@
 	Assignment: easyLibrary
 */
 
-
 (function(){
-	var anchors = document.querySelectorAll('a');
-	console.log(anchors);
+
+var anchors = 	document.querySelectorAll('a');
+
+var results = ryu(anchors);
+	console.log(results);	
 	
-	var results = YOURLIBNAME(anchors);
-	console.log(results);
+ryu(anchors, ryu.prototype.each());
+
 	
-	YOURLIBNAME(anchors);
+	
+	
 	
 })();  // end wrapper
