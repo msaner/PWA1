@@ -22,8 +22,8 @@
 	
 	
 	var check = function () {
-		var input = document.getElementById('input').innerHTML;
-		console.log("the user entered: " + input);
+		input = document.getElementById('input').value;
+		console.log(input);
 		
 			if(ranNum > input){			
 				output.innerHTML = "That's too low, guess again!";
