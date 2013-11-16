@@ -8,6 +8,12 @@
 
 
 (function(){
-
-
+	var anchors = document.querySelectorAll('a');
+	console.log(anchors);
+	
+	var results = YOURLIBNAME(anchors);
+	console.log(results);
+	
+	YOURLIBNAME(anchors);
+	
 })();  // end wrapper

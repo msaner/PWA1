@@ -6,16 +6,24 @@
 
 */
 
-
-var YOURLIBNAME = function(){
+// constructor
+var YOURLIBNAME = function(anchors){   // "anchors" is the parameter passed as an argument from main.js
 
     return new YOURLIBNAME.prototype.init();
 
-};
+}; //close constructor
 
+// prototype
 YOURLIBNAME.prototype = {
 
-    init: function(){},
+    init: function(anchors){
+		
+		
+	},
+	each:function(){
+		
+		
+	},
 
     elements: []
 
