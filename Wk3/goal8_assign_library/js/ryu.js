@@ -7,17 +7,17 @@
 */
 
 // constructor
-var ryu = function(anchors){   // "anchors" is the parameter passed as an argument from main.js
+var Ryu = function(anchors){   // "anchors" is the parameter passed as an argument from main.js
 
-    return new ryu.prototype.init();
+    return new Ryu.prototype.init();
 
 }; //close constructor
 
 // prototype
-ryu.prototype = {
+Ryu.prototype = {
 
     init: function(anchors){
-		ryu.prototype.elements = anchors;
+		Ryu.prototype.elements = anchors;
 		
 	},
 	each:function(){
@@ -29,4 +29,4 @@ ryu.prototype = {
 
 }; // end prototype
 
-ryu.prototype.init.prototype = ryu.prototype;
+Ryu.prototype.init.prototype = Ryu.prototype;
