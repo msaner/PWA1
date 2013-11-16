@@ -28,7 +28,7 @@ names = [
 		
 	}; //end for loop
  
-	var person = new window.Person("name", "action", "job", "row");
+	var person = new Person("name", "action", "job", "row");
 	
-console.log(window.Person);	
+console.log(person);	
 

@@ -9,16 +9,15 @@
  */
 
 
-	var Person = {
-		constructor: function(name, action, job, row){
+	var Person = function(name, action, job, row){
 			this.name = name;
 			this.action = action;
 			this.job = job;
 			this.row = row;
-		},
-		jobs: ["teacher","farmer","student","pilot"],
-		actions: ["sleeping","eating","working"]
-	};
+		};
+	
+		Person.prototype.jobs = ["teacher","farmer","student","pilot"];
+		Person.prototype.actions = ["sleeping","eating","working"];
 	
 	//adding Person object to the global window object
 	window.Person = Person;
