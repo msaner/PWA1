@@ -30,5 +30,15 @@ names = [
  
 	var person = new Person("name", "action", "job", "row");
 	
+	
+	setInterval(runUpdate, 1000 / 30);
+	function runUpdate(){
+					
+	};
+	
+	
+
+	
+	
 console.log(person);	
 
