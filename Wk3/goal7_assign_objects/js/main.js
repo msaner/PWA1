@@ -25,7 +25,10 @@ names = [
 		console.log("names array index: " + ranNum);
 		
 		
+		
 	}; //end for loop
  
+	var person = new window.Person("name", "action", "job", "row");
 	
-console.log(people);	
+console.log(window.Person);	
+
