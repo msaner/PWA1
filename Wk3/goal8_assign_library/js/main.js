@@ -9,11 +9,12 @@
 (function(){
 
 var anchors = 	document.querySelectorAll('a');
-
-var results = ryu(anchors);
+	console.log(anchors);
+	
+var results = Ryu(anchors);
 	console.log(results);	
 	
-ryu(anchors, ryu.prototype.each());
+Ryu(anchors, Ryu.prototype.each());
 
 	
 	

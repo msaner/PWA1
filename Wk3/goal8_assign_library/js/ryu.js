@@ -10,18 +10,20 @@
 var Ryu = function(anchors){   // "anchors" is the parameter passed as an argument from main.js
 
     return new Ryu.prototype.init();
-
+	console.log(anchors);
 }; //close constructor
 
 // prototype
 Ryu.prototype = {
-
+	
     init: function(anchors){
-		Ryu.prototype.elements = anchors;
-		
+		this.anchors = anchors;
+		console.log(this.anchors);
 	},
 	each:function(){
-		
+		for( var i = 0; i < elements.length; i++ ){
+			console.log(this[i].element);
+		};
 		
 	},
 
