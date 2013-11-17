@@ -50,8 +50,39 @@ console.log("start canvas");
 	
 	var drawBars = function(){
 		// set the font used for the numbers of each bar on the graph
-			ctx.font = '14px Georgia'
+		ctx.font = '14px Georgia'
 		
+		// loop through each item in the chartData array and draw a rectangle
+		for(var i = 0; i < chartData.length; i++){
+			
+			// start drawing the line
+			ctx.beginPath();
+			// set the color of the line fill
+			ctx.fillStyle = "rgba(100, 200, 200, 0.75)";
+			
+			// set the height of each bar
+			var height = maxBarHeight*chartData[i]/100;
+			
+			// position and draw each bar
+			
+			
+		};
 	};
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 })();
