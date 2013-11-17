@@ -20,6 +20,6 @@ console.log("start canvas");
 	canvas.height = 300;
 	
 	//add the canvas to the HTML document
-	document.createElement("canvas");
+	document.body.appendChild(canvas);
 
 })();
