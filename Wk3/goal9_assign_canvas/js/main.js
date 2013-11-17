@@ -64,9 +64,30 @@ console.log("start canvas");
 			var height = maxBarHeight*chartData[i]/100;
 			
 			// position and draw each bar
+			ctx.rect(i*80+90, 270-height, 50, height);
 			
+			// call the fill method
+			ctx.fill();
 			
-		};
+			// color of the text
+			ctx.fillStyle = "rgb(255, 255, 255)";
+			
+			// call the text fill
+			ctx.fillText();
+		};			
+		
+		// call function to write out text the bar chart needs
+		drawChartText();
+		
+		var drawChartText = function(){
+			ctx.font = "20px Georgia";
+			ctx.fillStyle = "rgb(255, 255, 255)";	
+			
+			// call fill text method to write out the header
+			ctx.fillText('TEST GRADES', 30, 30);
+			
+		};	
+
 	};
 	
 	
