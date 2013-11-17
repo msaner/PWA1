@@ -73,11 +73,11 @@ console.log("start canvas");
 			ctx.fillStyle = "rgb(255, 255, 255)";
 			
 			// call the text fill
-			ctx.fillText();
+			ctx.fillText(chartData[i], i*80+110, 260-height, 50, height);
 		};			
 		
 		// call function to write out text the bar chart needs
-		drawChartText();
+		
 		
 		var drawChartText = function(){
 			ctx.font = "20px Georgia";
@@ -86,8 +86,23 @@ console.log("start canvas");
 			// call fill text method to write out the header
 			ctx.fillText('TEST GRADES', 30, 30);
 			
+			// write a label below each bar
+			var xAxisData = [
+				"Quiz 1",
+				"Quiz 2",
+				"Quiz 3",
+				"Quiz 4"
+			];
+			
+			ctx.font = "14px Georgia";
+			ctx.fillStyle = "rgb(0, 0, 0)";
+			
+			for(var i = 0; i < xAxisData.length; i++){
+				ctx.fillText(xAxisData[i],i*80+95, 290);
+			};		
 		};	
-
+		
+	drawChartText();
 	};
 	
 	
