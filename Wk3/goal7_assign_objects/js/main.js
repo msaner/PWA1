@@ -42,6 +42,8 @@ names = [
 		
 		People[i] = person;
 		
+		
+		
 	}; //end for loop
  	console.log(People);
  
@@ -57,21 +59,23 @@ names = [
 			name.innerHTML = People[i].name;
 			jobs.innerHTML = People[i].job;
 		};
-		
-		
 	};
 		
 	populateHTML();
 	
 	
-	
-	
-	
 	function runUpdate(){
-					
+		People.forEach(function(person){
+			//console.log(person);
+			
+			person.update()
+		});
+			
 	};
 	
-	setInterval(runUpdate, 1000 / 30);
+	runUpdate();
+	
+	setInterval(runUpdate, 5000 );
 
 	
 	
