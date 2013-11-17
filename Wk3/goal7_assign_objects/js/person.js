@@ -15,7 +15,6 @@
 		this.action = this.actions[Math.floor(Math.random()*(this.actions.length - 0) + 0)];
 		this.job = this.jobs[Math.floor(Math.random()*(this.jobs.length - 0) + 0)];
 		this.row = row;	
-		this.change = Math.floor(Math.random() * 150);	
 	};
 		
 	//putting "jobs" and "actions" into the Person object
@@ -27,13 +26,11 @@
 	// let's add a function to the Person object prototype that will update our info
 	Person.prototype.update = function(){
 		this.action = this.actions[Math.floor(Math.random()*(this.actions.length - 0) + 0)];
-		//this.change++;
 		
-		//if(this.change == 150)	{		
 			var action = document.getElementById('r' + (this.row+1) + 'c3');
-				
+			
+			// displays the chosen action in the web page 	
 			action.innerHTML = this.action;
-			//this.change = Math.floor(Math.random() * (180 - 120) + 120);
 		//}
 	};
 	

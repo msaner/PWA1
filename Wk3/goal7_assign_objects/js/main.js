@@ -41,11 +41,11 @@ names = [
 		// we'll keep running the do loop to create a new person as long as the name already exists
 		
 		People[i] = person;
-		
-		
-		
+				
 	}; //end for loop
  	console.log(People);
+ 
+ 
  
 	//function to output persons name and job to the web page
 	var populateHTML = function(){
@@ -60,9 +60,9 @@ names = [
 			jobs.innerHTML = People[i].job;
 		};
 	};
-		
-	populateHTML();
 	
+	// calls the populateHTML function to put name and job into the web page.	
+	populateHTML();
 	
 	function runUpdate(){
 		People.forEach(function(person){
@@ -75,6 +75,7 @@ names = [
 	
 	runUpdate();
 	
+	// 5000 = approx 5 seconds.  every roughly 5 sec runUpdate will be run
 	setInterval(runUpdate, 5000 );
 
 	
